@@ -32,9 +32,9 @@ if (GMP_FOUND)
   include_directories(${GMP_INCLUDES})
 endif(GMP_FOUND)
 
-set(C_LIB ${CMAKE_BINARY_DIR}/libbls-dash.a)
+set(C_LIB ${CMAKE_BINARY_DIR}/libbls-grana.a)
 
-add_library(bls-dash ${CMAKE_CURRENT_SOURCE_DIR}/privatekey.cpp)
+add_library(bls-grana ${CMAKE_CURRENT_SOURCE_DIR}/privatekey.cpp)
 
 add_library(blstmp ${HEADERS}
   ${CMAKE_CURRENT_SOURCE_DIR}/privatekey.cpp
@@ -85,9 +85,9 @@ set_target_properties(combined
         )
 
 file(GLOB includes "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp")
-install(DIRECTORY ${relic_SOURCE_DIR}/include/ DESTINATION include/bls-dash)
-install(DIRECTORY ${relic_BINARY_DIR}/include/ DESTINATION include/bls-dash)
-install(FILES ${includes} DESTINATION include/bls-dash)
+install(DIRECTORY ${relic_SOURCE_DIR}/include/ DESTINATION include/bls-grana)
+install(DIRECTORY ${relic_BINARY_DIR}/include/ DESTINATION include/bls-grana)
+install(FILES ${includes} DESTINATION include/bls-grana)
 install(FILES ${C_LIB} DESTINATION lib)
 
 if (BUILD_BLS_TESTS)
