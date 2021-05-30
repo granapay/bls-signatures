@@ -77,7 +77,7 @@ add_custom_target(combined_custom
 
 add_library(combined STATIC IMPORTED GLOBAL)
 add_dependencies(combined combined_custom)
-target_link_libraries(bls-dash combined)
+target_link_libraries(bls-grana combined)
 
 set_target_properties(combined
         PROPERTIES
